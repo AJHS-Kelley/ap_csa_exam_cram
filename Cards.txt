@@ -84,7 +84,7 @@ public class Cards {
         /*
         Implementation not shown. Example:
         timer.hasSandOnTop();
-        Returns true if there is at least 1 grain of sand remaining in the top of the timer.
+        Returns true if there is sand remaining in the top of the timer.
         */
     }
 
@@ -92,9 +92,11 @@ public class Cards {
         /* 
         Implementation not shown.  Example:
         makeDeck();
-        Creates a deck of 52 cards: 2-10, Jack, Queen, King, and Ace of Hearts, Clubs, Spades, and Diamonds. 
+        Creates a deck of 52 cards: 2-10, Jack, Queen, King, and Ace with
+	suits of Hearts, Clubs, Spades, and Diamonds. 
         */
     }
+
 
     static void shuffleDeck() {
         /* 
@@ -108,7 +110,7 @@ public class Cards {
         /* 
         Implementation not shown.  Example:
         cardCards(5);
-        Draw num cards from the deck, uses .remove() method to remove from the deck <ArrayList>.  
+        Draw num cards from the deck, uses .remove() method to remove from the <ArrayList>.  
         */
     }
 
@@ -122,12 +124,12 @@ public class Cards {
 
     public static void main(String[] args) {
 
-        makeDeck(); // Get a deck of cards, if not enough decks, split deck in half and share with partner. 
-        shuffleDeck(); // Shuffle as best you can, please do not mangle the cards. 
-        setTimer(30); // Share the 30-second timer, or use a timer on your phone. 
+        makeDeck(); // Return all cards to the deck, split deck in half if needed. 	
+        shuffleDeck(); // Shuffle as best you can. 
+        setTimer(180); 
         startTimer();
 
-        // For the System.out.println() on the in this while loop, write them on this paper. 
+        // For the System.out.println() lines write them on this paper. 
         while (timer.hasSandOnTop() == true) {
             drawCards(1);
             if (getCardName() == "Ace of") {
@@ -143,19 +145,22 @@ public class Cards {
             }
         }
 
-        makeDeck(); // Return all cards to the deck, split deck in half if needed to share. 
-        shuffleDeck(); // Shuffle as best you can, please do not mangle the cards. 
 
-        Cards yourHand[] = new Cards[5]; // Create an Array called yourHand, make 5 elements in the array. 
-        yourHand[0] = drawCards(1); // Draw one card, put it into your "hand" on the left. 
-        yourHand[1] = drawCards(1); // Draw one card, put it into your "hand" on to the right of the card you just drew. 
-        yourHand[2] = drawCards(1); // Draw one card, put it into your "hand" on to the right of the card you just drew. 
-        yourHand[3] = drawCards(1); // Draw one card, put it into your "hand" on to the right of the card you just drew. 
-        yourHand[4] = drawCards(1); // Draw one card, put it into your "hand" on to the right of the card you just drew. 
+        makeDeck(); // Return all cards to the deck, split deck in half if needed.
+        shuffleDeck(); // Shuffle as best you can. 
+
+        Cards yourHand[] = new Cards[5]; // Array called yourHand with 5 elements.
+        yourHand[0] = drawCards(1); 
+        yourHand[1] = drawCards(1); 
+        yourHand[2] = drawCards(1); 
+        yourHand[3] = drawCards(1); 
+        yourHand[4] = drawCards(1); 
 
         /* 
-        Loop through each card in yourHand using a for-each loop. ONLY WORKS WITH ARRAYS. 
-        For each card, get the value of that card and add it to playerScore.  Use your phone calculator if necessary.
+        Loop through each card in yourHand using a for-each loop. 
+	ONLY WORKS WITH ARRAYS. 
+        For each card, get the value of that card and add it to playerScore.  
+	Use your phone calculator if necessary.
         */
 
         for (int i : yourHand) {
