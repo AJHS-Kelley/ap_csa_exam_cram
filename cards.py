@@ -5,12 +5,14 @@
 #   -- Reinforce use of loops. 
 #   -- Reinforce use of if-else statements. 
 
+# Variable Names are on the left.  The value is on the RIGHT of the = sign.  
 cardSuits = ["Hearts", "Diamonds", "Clubs", "Spades"] # A list. 
 cardName = "Blank Name" # A string
 cardValue = 0 # An integer, value is 2-10, J = 11, Q = 12, K = 13, A = 14
 playerScore = 0.0 # A float a.k.a. a decimal number.
 emptyHand = True # A boolean. 
 
+# def makes a function, followed by function name.  
 def getCardValue():
     return cardValue
 
@@ -20,7 +22,8 @@ def getCardSuit():
 def getCardName():
     return cardName;
 
-def setTimer(seconds):
+f(x) = 3y + 15
+def setTimer(seconds): # Parameters are inside ().
     # Full code not shown.  
     # Set a timer equal to seconds using the hourglass timer OR cellphone app.
     
@@ -62,6 +65,7 @@ while timeLeft() == True:
         print("You don't know jack!")
     else:
         print("This card has no face.")
+
 
 makeDeck()
 shuffleDeck(3)
