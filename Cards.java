@@ -20,7 +20,7 @@ public class Cards {
         this.cardSuit = suit;
         this.cardValue = value;
         if (value == 2) {
-            this.cardName = "Two of " + suit;
+            this.cardName = "Two of " + cardSuit;
         } else if (value == 3) {
             this.cardName = "Three of " + cardSuit;
         } else if (value == 4) {
